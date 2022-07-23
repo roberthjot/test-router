@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView, alias: "/home"
   },
   {
     path: '/protected',
@@ -35,6 +35,10 @@ const routes = [
     meta: {
       requiresAuth: true,
     }
+  },
+  {
+    path: "/example/:id(\\d+)?",
+    component: () => import("@/views/Login.vue")
   },
   {
     path: "/destination/:id/:slug",
