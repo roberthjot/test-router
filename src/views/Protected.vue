@@ -20,7 +20,7 @@ export default {
     methods: {
        logout() {
         window.user = null
-        this.$router.push({name: 'home'})
+        this.$router.push({name: 'home', query: {logout: null}})
        } 
     }
 }
